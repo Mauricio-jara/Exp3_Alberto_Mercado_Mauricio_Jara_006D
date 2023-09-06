@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
+  usuario={
+    email: '',
+    pass:'',
+    pass2:'',
+  }
+    
   constructor() { }
 
   ngOnInit() {
