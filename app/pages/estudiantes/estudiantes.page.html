@@ -1,0 +1,20 @@
+<ion-header class="fondo" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/agregar-estudiante']">Agregar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="full">
+    <ion-item *ngFor="let a of estudiantes; let i=index" [routerLink]="['/detalle', a.id]">
+      <ion-label>{{a['nombre']}} &nbsp; {{a['correo']}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

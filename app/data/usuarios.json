@@ -1,0 +1,46 @@
+{
+  "estudiantes": [
+    {
+      "id": 1,
+      "nombre": "Alberto Mercado",
+      "rut": "20.858.502-9",
+      "correo": "al.mercado@duocuc.cl"
+    },
+    {
+      "id": 2,
+      "nombre": "Mauricio Jara",
+      "rut": "21.263.362-K",
+      "correo": "maur.jaraa@duocuc.cl"
+    },
+    {
+      "nombre": "Nicolás Dendal",
+      "rut": "21.187.345-0",
+      "correo": "ni.dendal@duocuc.cl",
+      "id": 3
+    },
+    {
+      "nombre": "Nicolás Rocha",
+      "rut": "21.097.383-4",
+      "correo": "nico.rocha@duocuc.cl",
+      "id": 4
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Alberto Mercado",
+      "correo": "al.mercado@duocuc.cl",
+      "contraseña": "12345678",
+      "rol": "usuario",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "nombre": "Mauricio Jara",
+      "correo": "maur.jaraa@duocuc.cl",
+      "contraseña": "87654321",
+      "rol": "usuario",
+      "isactive": true
+    }
+  ]
+}

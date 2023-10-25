@@ -16,9 +16,24 @@ export class AppComponent {
 
   componentes : Componente[]=[
     {
-      name:'Descripción',
+      name:'inicio',
       icon: 'home-outline',
       redirecTo:'/lector'
+    },
+    {
+      name:'Perfil',
+      icon: 'person-circle-outline',
+      redirecTo:'/perfil'
+    },
+    {
+      name:'usuarios',
+      icon: 'person-outline',
+      redirecTo:'/estudiantes'
+    },
+    {
+      name:'Cerrar sesion',
+      icon: 'person-remove-outline',
+      redirecTo:'/loguot'
     },
   ]
 }
