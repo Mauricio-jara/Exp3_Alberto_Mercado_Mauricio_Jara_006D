@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiCrudService } from 'src/app/servicios/api-crud.service';
+import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,12 +12,11 @@ export class DetallePage implements OnInit {
   estudiantes={
     id: 0,
     nombre: "",
-    rut: "",
     correo: ""
   }
 
   constructor(
-    private apiCrud: ApiCrudService,
+    private apiCrud: AuthService,
     private router: Router
   ) { }
 
@@ -35,12 +34,11 @@ export class DetallePage implements OnInit {
   }
 
   getEstudianteById(estudianteId: number) {
-    this.apiCrud.buscarEstudiante(estudianteId).subscribe(
+    this.apiCrud.buscarEstudianteI(estudianteId).subscribe(
       (resp:any) => {
         this.estudiantes = {
           id: resp[0].id,
           nombre: resp[0].nombre,
-          rut: resp[0].rut,
           correo: resp[0].correo
         }
       }

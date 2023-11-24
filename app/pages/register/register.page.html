@@ -1,7 +1,7 @@
 <ion-header class="fondo" [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button icon="caret-back"></ion-back-button>
     </ion-buttons>
     <ion-title>Registro</ion-title>
   </ion-toolbar>
@@ -13,21 +13,76 @@
       <ion-col size="1"><br></ion-col>
       <ion-col size="10">
         <br>
-        <ion-list>
-          
-        </ion-list>
+        <form [formGroup]="registerForm">
+          <ion-item>
+            <ion-label position="floating">Nombre:</ion-label>
+            <ion-input type="text" formControlName="nombre"></ion-input>
+          </ion-item>
+
+          <div *ngIf="registerForm.get('nombre')?.invalid && (registerForm.get('nombre')?.dirty || registerForm.get('nombre')?.touched)">
+            <div style="color: red" *ngIf="registerForm.get('nombre')?.hasError('required')">
+              *nombre es obligatorio
+            </div>
+            <div style="color: red" *ngIf="registerForm.get('correo')?.hasError('minlength')">
+              *nombre debe tener mínimo 4 caracteres
+            </div>
+          </div><br>
+
+          <ion-item>
+            <ion-label position="floating">Correo:</ion-label>
+            <ion-input type="text" formControlName="correo"></ion-input>
+          </ion-item>
+
+          <div *ngIf="registerForm.get('correo')?.invalid && (registerForm.get('correo')?.dirty || registerForm.get('correo')?.touched)">
+            <div style="color: red" *ngIf="registerForm.get('correo')?.hasError('required')">
+              *Correo es obligatorio
+            </div>
+            <div style="color: red" *ngIf="registerForm.get('correo')?.hasError('minlength')">
+              *Correo debe tener mínimo 4 caracteres
+            </div>
+          </div><br>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña:</ion-label>
+            <ion-input type="password" formControlName="contraseña"></ion-input>
+          </ion-item>
+
+          <div *ngIf="registerForm.get('contraseña')?.invalid && (registerForm.get('contraseña')?.dirty || registerForm.get('contraseña')?.touched)">
+            <div style="color: red" *ngIf="registerForm.get('contraseña')?.hasError('required')">
+              *Contraseña es obligatorio
+            </div>
+            <div style="color: red" *ngIf="registerForm.get('contraseña')?.hasError('minlength')">
+              *Contraseña debe tener mínimo 8 caracteres
+            </div>
+          </div><br>
+
+          <ion-item>
+            <ion-label position="floating">confirmar contraseña:</ion-label>
+            <ion-input type="password" formControlName="rcontraseña"></ion-input>
+          </ion-item>
+
+          <div *ngIf="registerForm.get('rcontraseña')?.invalid && (registerForm.get('rcontraseña')?.dirty || registerForm.get('rcontraseña')?.touched)">
+            <div style="color: red" *ngIf="registerForm.get('rcontraseña')?.hasError('required')">
+              *Contraseña es obligatorio
+            </div>
+            <div style="color: red" *ngIf="registerForm.get('rcontraseña')?.hasError('minlength')">
+              *Contraseña debe tener mínimo 8 caracteres
+            </div>
+          </div><br>
+
+          <ion-item>
+            <ion-select placeholder="Selecionar rol" formControlName="role">
+              <ion-select-option value="Profesor">Profesor</ion-select-option>
+              <ion-select-option value="Alumno">Alumno</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </form>
         <br>
-        <ion-button routerLink="/lector" expand="block" shape="round">
-          Registrar
-        </ion-button>
+        <ion-button (click)="register()" expand="block" shape="round">Registrar</ion-button>
       </ion-col>
       <ion-col size="1"><br></ion-col>
     </ion-row>
   </ion-grid>
-  
 </ion-content>
 
-<div class="fondo">
-<br><br><br>
-</div>
  

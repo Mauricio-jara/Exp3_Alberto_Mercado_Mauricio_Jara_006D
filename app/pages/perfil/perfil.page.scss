@@ -20,10 +20,16 @@ ion-item {
 ion-list{
     background-color: #ffde59;
 }
+
 ion-card {
     --background: #004AAD;
-    --color: #000000;
+    --color: #fff;
 }
+
+.texto {
+    justify-content: center;
+}
+
 .foto{
     background-color: #ffde59;
     border-radius: 50%;

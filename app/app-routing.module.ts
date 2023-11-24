@@ -5,7 +5,7 @@ import { AutorizadoGuard } from './guards/autorizado.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'estudiantes',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
@@ -31,11 +31,6 @@ const routes: Routes = [
     canActivate: [AutorizadoGuard]
   },
   {
-    path: 'agregar-estudiante',
-    loadChildren: () => import('./pages/agregar-estudiante/agregar-estudiante.module').then( m => m.AgregarEstudiantePageModule),
-    canActivate: [AutorizadoGuard]
-  },
-  {
     path: 'detalle/:id',
     loadChildren: () => import('./pages/detalle/detalle.module').then( m => m.DetallePageModule),
     canActivate: [AutorizadoGuard]
@@ -46,7 +41,53 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'juegos',
+    loadChildren: () => import('./pages/juegos/juegos.module').then( m => m.JuegosPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'detalle-juegos/:id',
+    loadChildren: () => import('./pages/detalle-juegos/detalle-juegos.module').then( m => m.DetalleJuegosPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'agregar-juego',
+    loadChildren: () => import('./pages/agregar-juego/agregar-juego.module').then( m => m.AgregarJuegoPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'asignaturas/:id',
+    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'agregar-asignatura/:id',
+    loadChildren: () => import('./pages/agregar-asignatura/agregar-asignatura.module').then( m => m.AgregarAsignaturaPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'modif-juego/:id',
+    loadChildren: () => import('./pages/modif-juego/modif-juego.module').then( m => m.ModifJuegoPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'eliminar-juego/:id',
+    loadChildren: () => import('./pages/eliminar-juego/eliminar-juego.module').then( m => m.EliminarJuegoPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'qr/:id',
+    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'scarner',
+    loadChildren: () => import('./pages/scarner/scarner.module').then( m => m.ScarnerPageModule),
+    canActivate: [AutorizadoGuard]
   },
 
 ];

@@ -5,26 +5,37 @@
         <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
       </ion-button>
     </ion-buttons> 
-    <ion-title class="ion-no-padding">Descripción</ion-title>
+    <ion-title class="ion-no-padding">Menú Principal</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card class="ion-text-center">
+    <h1 class="ion-no-margin">¡Bienvenid&#64;!</h1>
+    <h1 class="ion-no-margin">{{ nombre }}</h1>
+  </ion-card>
   <ion-grid fixed>
     <ion-row>
       <ion-col size="1"><br></ion-col>
       <ion-col size="10">
+        <ion-button routerLink="/juegos" expand="block" shape="round">
+          Juegos de Steam
+        </ion-button>
+        <br>
         <ion-button routerLink="/estudiantes" expand="block" shape="round">
-          Click me
+          Lista de Estudiantes
+        </ion-button>
+        <br>
+        <ion-button [routerLink]="['/asignaturas', this.tuID]" expand="block" shape="round">
+          Asignaturas
         </ion-button>
       </ion-col>
       <ion-col size="1"><br></ion-col>
     </ion-row>
   </ion-grid>
-  
 </ion-content>
 
 <div class="fondo">
-<br><br><br>
+  <br><br><br>
 </div>
  

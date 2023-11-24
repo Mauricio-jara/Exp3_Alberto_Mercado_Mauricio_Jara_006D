@@ -8,12 +8,21 @@ import { MenuController } from '@ionic/angular';
 })
 export class LectorPage implements OnInit {
 
-  constructor(private menuController: MenuController,) { }
+  nombre = sessionStorage.getItem('nombre');
+
+  tuID = parseInt(sessionStorage.getItem('id') || "", 10);
+
+  constructor
+  (
+    private menuController: MenuController,
+  ) { }
 
   ngOnInit() {
+    console.log(this.tuID)
   }
   
   MostrarMenu(){
     this.menuController.open('first');
   }
+
 }

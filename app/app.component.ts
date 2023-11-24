@@ -16,7 +16,7 @@ export class AppComponent {
 
   componentes : Componente[]=[
     {
-      name:'inicio',
+      name:'Inicio',
       icon: 'home-outline',
       redirecTo:'/lector'
     },
@@ -26,12 +26,12 @@ export class AppComponent {
       redirecTo:'/perfil'
     },
     {
-      name:'usuarios',
-      icon: 'person-outline',
-      redirecTo:'/estudiantes'
+      name:'scaner',
+      icon: 'person-remove-outline',
+      redirecTo:'/scarner'
     },
     {
-      name:'Cerrar sesion',
+      name:'Cerrar sesión',
       icon: 'person-remove-outline',
       redirecTo:'/loguot'
     },

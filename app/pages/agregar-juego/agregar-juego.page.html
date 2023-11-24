@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Agregar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="1"><br></ion-col>
+      <ion-col size="10">
+        <form>
+          <ion-item>
+            <br>
+            <ion-label position="floating">Nombre:</ion-label>
+            <ion-input type="text" name="nombre" [(ngModel)]="newJuego.nombre"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Descripción:</ion-label>
+            <ion-input type="text" name="desc" [(ngModel)]="newJuego.desc"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Precio:</ion-label>
+            <ion-input type="text" name="precio" [(ngModel)]="newJuego.precio"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Url de Imagen de Steam:</ion-label>
+            <ion-input type="text" name="imagen" [(ngModel)]="newJuego.imagen"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Url de Steam:</ion-label>
+            <ion-input type="text" name="url" [(ngModel)]="newJuego.url"></ion-input>
+          </ion-item>
+          <br>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="crearJuego()" expand="block" fill="clear" shape="round">
+                Agregar Juego
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+      <ion-col size="1"><br></ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
+
+<div class="fondo">
+  <br><br><br>
+</div>

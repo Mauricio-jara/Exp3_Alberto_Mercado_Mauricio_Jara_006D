@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>eliminar-juego</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+    <h1 class="ion-no-margin">¿Estás seguro de querer eliminar {{newJuego.nombre}}?</h1>
+  </ion-card>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="1"><br></ion-col>
+      <ion-col size="10">
+        <ion-button (click)="crearJuego()" expand="block" shape="round">
+          ELIMINAR
+        </ion-button>
+        <br>
+        <ion-button [routerLink]="['/detalle-juegos', this.newJuego.id]" expand="block" shape="round">
+          VOLVER
+        </ion-button>
+      </ion-col>
+      <ion-col size="1"><br></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<div class="fondo">
+  <br><br><br>
+</div>

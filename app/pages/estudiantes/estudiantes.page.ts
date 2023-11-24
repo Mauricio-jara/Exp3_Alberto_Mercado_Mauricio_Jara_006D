@@ -1,9 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
-import { ApiCrudService } from 'src/app/servicios/api-crud.service';
+import { AuthService } from 'src/app/servicios/auth.service';
 import { LoadingController, MenuController } from '@ionic/angular';
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
-import { IEstudiantes } from 'src/app/interfaces/interfaces';
+import { IEstudiantes } from '../interfaces/interfaces';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class EstudiantesPage {
   estudiantes: IEstudiantes[]=[];
 
   constructor(
-    private estudianteService: ApiCrudService,
+    private estudianteService: AuthService,
     private loadingCtrl: LoadingController,
     private menuController: MenuController
   ) { }

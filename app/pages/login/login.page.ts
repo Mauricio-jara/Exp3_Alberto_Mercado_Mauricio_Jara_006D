@@ -15,9 +15,9 @@ export class LoginPage implements OnInit {
 
   usuarios = {
     id: 0,
+    nombre: "",
     correo: "",
     contraseña: "",
-    rol: "",
     isactive: true
   }
 
@@ -41,23 +41,24 @@ export class LoginPage implements OnInit {
 
   login() {
     if (this.loginForm.valid) {
-      this.authService.GetUserById(this.loginForm.value.correo).subscribe(resp => {
+      this.authService.buscarProfesorC(this.loginForm.value.correo).subscribe(resp => {
         this.userdata = resp;
         console.log(this.userdata)
         if (this.userdata.length > 0) {
           this.usuarios = {
             id: this.userdata[0].id,
+            nombre: this.userdata[0].nombre,
             correo: this.userdata[0].correo,
             contraseña: this.userdata[0].contraseña,
-            rol: this.userdata[0].rol,
             isactive: this.userdata[0].isactive
           }
           console.log(resp);
           console.log(this.usuarios.contraseña);
           if (this.usuarios.contraseña === this.loginForm.value.contraseña) {
             if (this.usuarios.isactive) {
+              sessionStorage.setItem('id', this.usuarios.id.toString())
+              sessionStorage.setItem('nombre', this.usuarios.nombre);
               sessionStorage.setItem('correo', this.usuarios.correo);
-              sessionStorage.setItem('rol', this.usuarios.rol);
               sessionStorage.setItem('ingresado', 'true');
               this.showToast('Sesión Iniciada');
               this.router.navigateByUrl("/lector");

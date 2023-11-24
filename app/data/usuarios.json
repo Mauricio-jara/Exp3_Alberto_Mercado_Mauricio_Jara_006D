@@ -3,35 +3,8 @@
     {
       "id": 1,
       "nombre": "Alberto Mercado",
-      "rut": "20.858.502-9",
-      "correo": "al.mercado@duocuc.cl"
-    },
-    {
-      "id": 2,
-      "nombre": "Mauricio Jara",
-      "rut": "21.263.362-K",
-      "correo": "maur.jaraa@duocuc.cl"
-    },
-    {
-      "nombre": "Nicolás Dendal",
-      "rut": "21.187.345-0",
-      "correo": "ni.dendal@duocuc.cl",
-      "id": 3
-    },
-    {
-      "nombre": "Nicolás Rocha",
-      "rut": "21.097.383-4",
-      "correo": "nico.rocha@duocuc.cl",
-      "id": 4
-    }
-  ],
-  "usuarios": [
-    {
-      "id": 1,
-      "nombre": "Alberto Mercado",
       "correo": "al.mercado@duocuc.cl",
-      "contraseña": "12345678",
-      "rol": "usuario",
+      "contraseña": "87654321",
       "isactive": true
     },
     {
@@ -39,8 +12,94 @@
       "nombre": "Mauricio Jara",
       "correo": "maur.jaraa@duocuc.cl",
       "contraseña": "87654321",
-      "rol": "usuario",
       "isactive": true
+    }
+  ],
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Viviana Poblete",
+      "correo": "v.pobletel@profesor.duoc.cl",
+      "contraseña": "12345678",
+      "isactive": true,
+      "asignaturas": [
+        {
+          "id": 1,
+          "nombre": "Programación Móvil",
+          "tipo": "Semestral",
+          "horas": 5
+        },
+        {
+          "id": 2,
+          "nombre": "Programación Web",
+          "tipo": "Anual",
+          "horas": 6
+        }
+      ]
+    },
+    {
+      "nombre": "Francisco Valdivieso",
+      "correo": "f.valdivieso@profesor.duocuc.cl",
+      "contraseña": "87654321",
+      "isactive": true,
+      "id": 2,
+      "asignaturas": [
+        {
+          "id": 1,
+          "nombre": "Calidad de Software",
+          "tipo": "Semestral",
+          "horas": 3
+        }
+      ]
+    }
+  ],
+  "juegos": [
+    {
+      "id": 1,
+      "nombre": "Hollow Knight",
+      "desc": "Hollow Knight es una aventura de acción clásica en 2D ambientada en un vasto mundo interconectado. Explora cavernas tortuosas, ciudades antiguas y páramos mortales. Combate contra criaturas corrompidas, haz amistad con extraños insectos y resuelve los antiguos misterios que yacen en el corazón de reino.",
+      "precio": "$8300",
+      "imagen": "https://cdn.akamai.steamstatic.com/steam/apps/367520/header.jpg?t=1695270428",
+      "url": "https://store.steampowered.com/app/367520/Hollow_Knight/"
+    },
+    {
+      "id": 2,
+      "nombre": "GTFO",
+      "desc": "GTFO es un shooter cooperativo extremo con tintes de terror que alterna entre el suspense y la acción más explosiva. El sigilo, la estrategia y el trabajo en equipo serán fundamentales para sobrevivir en esta letal prisión subterránea. Trabaja en equipo... o muere con tu equipo.",
+      "precio": "$14900",
+      "imagen": "https://cdn.akamai.steamstatic.com/steam/apps/493520/header.jpg?t=1696586454",
+      "url": "https://store.steampowered.com/app/493520/GTFO/"
+    },
+    {
+      "nombre": "Enter the Gungeon",
+      "desc": "Enter the Gungeon es un dungeon crawler de tiroteos que sigue a una banda de marginados arrepentidos en su intento de conseguir la absolución personal a base de disparar, saquear, dar volteretas y voltear mesas para alcanzar el tesoro supremo de la legendaria Armazmorra: el arma que puede matar el pasado. Elige un héroe y ábrete paso a tiros hasta el fondo de la Armazmorra, sobreviviendo a una desafiante y siempre cambiante serie de plantas llenas de los peligrosamente adorables armuertos y temibles jefes de la Armazmorra, armados hasta los dientes. Reúne un valioso botín, descubre secretos ocultos y charla con mercaderes y tenderos oportunistas para comprar objetos poderosos que te den ventaja en el combate.",
+      "precio": "$8300",
+      "imagen": "https://cdn.akamai.steamstatic.com/steam/apps/311690/header.jpg?t=1691624090",
+      "url": "https://store.steampowered.com/app/311690/Enter_the_Gungeon/",
+      "id": 3
+    },
+    {
+      "nombre": "The Binding of Isaac",
+      "desc": "When Isaac’s mother starts hearing the voice of God demanding a sacrifice be made to prove her faith, Isaac escapes into the basement facing droves of deranged enemies, lost brothers and sisters, his fears, and eventually his mother.",
+      "precio": "$6400",
+      "imagen": "https://cdn.akamai.steamstatic.com/steam/apps/250900/header.jpg?t=1617174663",
+      "url": "https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/",
+      "id": 4
+    }
+  ],
+  "qr": [
+    {
+      "id": 1,
+      "nombre": "Viviana Poblete",
+      "fecha": "23-11-2023",
+      "materia": "Programación Móvil",
+      "asistencia": [
+        {
+          "id": 1,
+          "nombre": "Mauricio Jara",
+          "hora": "22:44"
+        }
+      ]
     }
   ]
 }

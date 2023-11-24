@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { ApiCrudService } from 'src/app/servicios/api-crud.service';
-import { LoadingController } from '@ionic/angular';
-import { InfiniteScrollCustomEvent } from '@ionic/angular';
-import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
-import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -23,14 +18,14 @@ export class LoguotPage implements OnInit {
               private router: Router) { }
   
   ngOnInit(){
-    
   }
 
   logout() {
     this.authservice.logout();
     this.username = '';
     this.password = ''; // Limpiando la contraseña
-    this.router.navigate(['/login']); 
+    this.router.navigate(['/login']);
+    sessionStorage.clear();
     }
   
   mostrarMenu() {

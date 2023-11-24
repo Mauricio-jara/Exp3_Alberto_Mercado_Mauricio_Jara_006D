@@ -1,5 +1,8 @@
 <ion-header class="fondo" [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="caret-back"></ion-back-button>
+    </ion-buttons>
     <ion-title>Inicio de sesión</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +16,7 @@
         <br>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
           <ion-item>
-            <ion-label position="floating">Usuario:</ion-label>
+            <ion-label position="floating">Correo:</ion-label>
             <ion-input type="text" formControlName="correo"></ion-input>
           </ion-item>
 
@@ -24,7 +27,7 @@
             <div style="color: red" *ngIf="loginForm.get('correo')?.hasError('minlength')">
               *Correo debe tener mínimo 4 caracteres
             </div>
-          </div>
+          </div><br>
 
           <ion-item>
             <ion-label position="floating">Contraseña:</ion-label>
@@ -46,7 +49,6 @@
       <ion-col size="1"><br></ion-col>
     </ion-row>
   </ion-grid>
-  
 </ion-content>
 
 <div class="fondo">
